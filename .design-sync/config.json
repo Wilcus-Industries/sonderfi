@@ -1,0 +1,30 @@
+{
+  "pkg": "sonderfi",
+  "globalName": "Sonderfi",
+  "projectId": "5409d886-20ad-4cb3-8802-0460930470b6",
+  "shape": "package",
+  "srcDir": "component",
+  "tsconfig": "tsconfig.json",
+  "componentSrcMap": {
+    "FitText": "component/fitText.tsx",
+    "Logo": "component/logo.tsx",
+    "LogoFull": "component/logo.tsx",
+    "LogoWilcus": "component/logo.tsx",
+    "NavbarItem": "component/navbarItem.tsx",
+    "Navbar": "component/navbar.tsx",
+    "SignInButton": "component/signInButton.tsx",
+    "Parallax": "component/parallax.tsx"
+  },
+  "dtsPropsFor": {
+    "FitText": "  /** Text to scale; glyphs fill the parent width via an SVG viewBox framed to the text's bounding box. */\n  children: string;\n  /** Text-presentation utilities applied to the painted <text> (weight, italic, color, tracking). */\n  className?: string;\n  /** font-* family utility applied before className. Defaults to \"font-playfair\". */\n  font?: string;",
+    "Logo": "  // No props. Animated three-orbit atom mark; strokes use var(--background).",
+    "LogoFull": "  // No props. Logo mark + \"SonderFi\" wordmark.",
+    "LogoWilcus": "  // No props. Logo mark + \"SonderFi | by Wilcus Industries\" lockup.",
+    "NavbarItem": "  /** Visible label. */\n  title: string;\n  /** Link target. */\n  href: string;",
+    "Navbar": "  // No props. Fixed HOME / DASHBOARD / ABOUT nav row composed of NavbarItem.",
+    "SignInButton": "  /** Icon node rendered beside the \"SIGN IN WITH\" label. */\n  icon: React.ReactNode;\n  /** OAuth provider; inert until set. */\n  provider?: \"google\" | \"apple\";",
+    "Parallax": "  /** Content that drifts on scroll. */\n  children: React.ReactNode;\n  /** Generic mode: px the block drifts as it passes through the viewport. */\n  distance?: number;\n  /** Hero mode: drift driven by page scroll, clamped to the next sibling's top. */\n  clampToNext?: boolean;\n  /** Classes applied to the moving element itself. */\n  className?: string;"
+  },
+  "cssEntry": ".design-sync/styles/ds.css",
+  "readmeHeader": ".design-sync/conventions.md"
+}

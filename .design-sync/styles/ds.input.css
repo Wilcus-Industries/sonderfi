@@ -1,0 +1,49 @@
+/* design-sync Tailwind input. Compiled to ds.css (cfg.cssEntry).
+   Mirrors app/globals.css tokens + animations, and pins the brand font
+   families that next/font/google injects at runtime in the real app
+   (Geist / Geist Mono / Playfair Display) so utilities resolve in the
+   standalone design bundle. Fonts load remotely (@import url) — acceptable
+   ([FONT_REMOTE]); the host app serves them via next/font. */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@source "../../component";
+@source "../../app";
+@source "../previews";
+
+:root {
+    --background: #000000;
+    --foreground: #ededed;
+    --font-geist-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+    --font-geist-mono: 'Geist Mono', ui-monospace, monospace;
+    --font-playfair: 'Playfair Display', serif;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --font-playfair: var(--font-playfair);
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+}
+
+@keyframes orbit-1 { from { transform: rotate(0deg);   } to { transform: rotate(360deg);  } }
+@keyframes orbit-2 { from { transform: rotate(60deg);  } to { transform: rotate(-300deg); } }
+@keyframes orbit-3 { from { transform: rotate(120deg); } to { transform: rotate(480deg);  } }
+
+.atom-orbit-1, .atom-orbit-2, .atom-orbit-3 {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+.atom-orbit-1 { animation: orbit-1 32s linear infinite; }
+.atom-orbit-2 { animation: orbit-2 48s linear infinite; }
+.atom-orbit-3 { animation: orbit-3 24s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+    .atom-orbit-1, .atom-orbit-2, .atom-orbit-3 { animation: none; }
+}
