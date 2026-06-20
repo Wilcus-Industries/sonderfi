@@ -13,8 +13,8 @@ export default function SignInButton({ icon, provider } : {
     };
 
     return (
-        <div onClick={handleSignIn} className={`bg-background text-foreground w-35 flex flex-row items-center
-                         justify-center gap-1 h-8 hover:bg-foreground
+        <div onClick={handleSignIn} className={`bg-background text-foreground w-42 flex flex-row items-center
+                         justify-center gap-1 h-10 hover:bg-foreground text-xl 
                          hover:text-background transition-colors duration-300
                          cursor-pointer `}>
             <h1 className={"font-playfair"}>

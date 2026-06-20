@@ -1,6 +1,4 @@
 import NavbarItem from "@/component/navbarItem";
-import SignInButton from "@/component/signInButton";
-import {FcGoogle} from "react-icons/fc";
 
 export default function Navbar() {
 
